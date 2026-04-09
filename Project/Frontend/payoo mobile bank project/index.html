@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <title>Payoo Mobile Bank</title>
+  </head>
+  <body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center justify-center">
+
+    <!-- log in page figure -->
+     <div class="  h-[80px] w-[220px] mb-3 bg-cover bg-center flex items-center justify-center">
+        <img src="payoo-resources/assets/Logo-full.png" alt="">
+     </div>
+
+    <!-- log in form -->
+    <form class="rounded-lg p-5 gap-5 bg-white w-[280px] ">
+      <div>
+        <label class="font-semibold">Mobile Number</label> <br>
+        <input id='mobile-num'type="tel" placeholder="Enter your number" maxlength="11" minlength="11" class="input my-3 rounded-3xl bg-slate-100" />
+      </div>
+      <div>
+        <label class=" font-semibold">4 digit pin</label> <br>
+        <input id="pin-num" type="text" placeholder="Enter your pin" maxlength="4" minlength="4" class="input my-3 rounded-3xl  bg-gray-100" />
+      </div>
+      <button  id="btn-login" class="btn bg-blue-500 rounded-3xl w-full mt-2">log in</button>   <!--- form er button type by defult submit thake tai click korle reload hoy page type=button dile solve hoy eta or click function e  e.preventDefault();  eta dile solve hoy-->
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
