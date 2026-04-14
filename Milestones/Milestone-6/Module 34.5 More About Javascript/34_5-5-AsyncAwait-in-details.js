@@ -1,0 +1,33 @@
+// Async/Await কী?
+
+// Promise লেখা অনেক সময় জটিল হয়ে যায়।
+// Async/Await হলো Promise কেই সহজভাবে লেখার উপায়! 😊
+
+
+// ### মূল বিষয়গুলো:
+
+// | বিষয় | মানে |
+// |-------|------|
+// | `async` | এই function এ await ব্যবহার হবে |
+// | `await` | Promise শেষ হওয়া পর্যন্ত অপেক্ষা করো |
+// | `try` | কাজ করার চেষ্টা করো |
+// | `catch` | সমস্যা হলে ধরো |
+// | `finally` | সবসময় চলবে |
+
+// > 💡 **মনে রাখো:** `await` শুধু `async` function এর ভেতরে ব্যবহার করা যাবে!
+
+
+
+async function fetchUser() {
+  try {
+    const response = await fetch("https://api.example.com/user");
+    const data = await response.json();
+    console.log("✅ User:", data);
+  } catch (error) {
+    console.log("❌ সমস্যা হয়েছে:", error);
+  } finally {
+    console.log("🔄 সবসময় চলবে!");
+  }
+}
+
+fetchUser();
